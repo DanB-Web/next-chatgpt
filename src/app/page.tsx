@@ -1,3 +1,3 @@
-export default function Home() {
-  return <div className="mt-8">Welcome to GPT Chat</div>;
+export default function HomePage() {
+  return <div>Welcome to GPT Chat</div>;
 }
