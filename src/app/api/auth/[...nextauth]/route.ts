@@ -2,7 +2,7 @@
 Anything request starting 'api/auth/' will be considered handled by nextauth 
 (ie it will be considered api/auth/nextauth/route.ts)
 */
-import NextAuth, { CallbacksOptions } from "next-auth";
+import NextAuth from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
 
 const authOptions = {

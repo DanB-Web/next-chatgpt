@@ -19,13 +19,15 @@ function getFirstTwoCapitalLetters(str?: string | null) {
 export default function UserButton() {
   const { data: session, status } = useSession();
 
+  const avatarUri = session?.user?.image || undefined;
+
   return (
     <div>
       {status === "authenticated" && (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Avatar>
-              <AvatarImage src={session?.user?.image!} />
+              <AvatarImage src={avatarUri} />
               <AvatarFallback>
                 {getFirstTwoCapitalLetters(session?.user?.name)}
               </AvatarFallback>
